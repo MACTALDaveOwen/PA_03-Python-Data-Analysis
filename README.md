@@ -8,4 +8,14 @@ head()                    - displays the first five rows of the DataFrame
 tail()                    - displays the last five rows of the DataFrame
 ```
 
-###### Problem 02. Load CSV & Display Rows.
+###### Problem 02. Subsetting, Slicing, & Indexing with Dataframes.
+
+This program extracts specific information from the cars dataset using pandas operations such as .iloc, .loc, and conditional filtering.
+
+```
+iloc[rows, cols]       - used for integer-based indexing (row and column positions)
+::2                    - slice notation that selects every second column (odd-numbered columns)
+DataFrame[condition]   - filters rows based on a condition
+loc[condition, cols]   - selects specific columns from rows that meet the condition
+.values[0]             - extracts the first matching value from a Series
+```
