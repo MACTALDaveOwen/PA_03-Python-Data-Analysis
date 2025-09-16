@@ -1,0 +1,95 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "0a8e6fb4-f4ae-47c6-b1f0-caa02aa2ff1e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "A. First Five Rows with Odd-Numbered Columns:\n",
+      "\n",
+      "               Model  cyl   hp     wt  vs  gear\n",
+      "0          Mazda RX4    6  110  2.620   0     4\n",
+      "1      Mazda RX4 Wag    6  110  2.875   0     4\n",
+      "2         Datsun 710    4   93  2.320   1     4\n",
+      "3     Hornet 4 Drive    6  110  3.215   1     3\n",
+      "4  Hornet Sportabout    8  175  3.440   0     3\n",
+      "\n",
+      "B. Rows that Contains the 'Mazda RX4': \n",
+      "\n",
+      "       Model   mpg  cyl   disp   hp  drat    wt   qsec  vs  am  gear  carb\n",
+      "0  Mazda RX4  21.0    6  160.0  110   3.9  2.62  16.46   0   1     4     4\n",
+      "\n",
+      "C. Cylinders for Camaro Z28:\n",
+      "8\n",
+      "\n",
+      "D. Cylinders & Gear Type for Mazda RX4 Wag, Ford Pantera L, & Honda Civic:\n",
+      "\n",
+      "             Model  cyl  gear\n",
+      "1    Mazda RX4 Wag    6     4\n",
+      "18     Honda Civic    4     4\n",
+      "28  Ford Pantera L    8     5\n"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "\n",
+    "cars = pd.read_csv(\"cars.csv\")\n",
+    "\n",
+    "# displays the first five rows with odd-numbered columns\n",
+    "print (\"A. First Five Rows with Odd-Numbered Columns:\\n\")\n",
+    "print (cars.iloc[0:5, ::2])\n",
+    "\n",
+    "# displays the rown that has the Model = Mazda RX4\n",
+    "print (\"\\nB. Rows that Contains the 'Mazda RX4': \\n\")\n",
+    "print (cars[cars[\"Model\"] == \"Mazda RX4\"])\n",
+    "\n",
+    "# prints the number of cylinders in Camaro Z28\n",
+    "print (\"\\nC. Cylinders for Camaro Z28:\")\n",
+    "print (cars.loc[cars[\"Model\"] == \"Camaro Z28\", \"cyl\"].values[0])\n",
+    "\n",
+    "# prints the number of cylinders and gear type of various car models\n",
+    "print (\"\\nD. Cylinders & Gear Type for Mazda RX4 Wag, Ford Pantera L, & Honda Civic:\\n\")\n",
+    "print (cars.loc[\n",
+    "       (cars[\"Model\"] == \"Mazda RX4 Wag\") |\n",
+    "       (cars[\"Model\"] == \"Ford Pantera L\") |\n",
+    "       (cars[\"Model\"] == \"Honda Civic\"),\n",
+    "       [\"Model\", \"cyl\", \"gear\"]])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "747c4aaa-0e6f-4d67-ac4d-f67e25879a9a",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
