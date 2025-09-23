@@ -1,6 +1,6 @@
 # PA_03 Python Data Analysis
 
-#### Problem 01. Load CSV & Display Rows.
+### Problem 01. Load CSV & Display Rows.
 
 This program loads a .csv file into a pandas DataFrame named cars, and then displays the first five and last five rows of the dataset.
 #### Functions utilized in Problem 01
@@ -35,7 +35,7 @@ print (cars.tail())
 
 ***
 
-#### Problem 02. Subsetting, Slicing, & Indexing with Dataframes.
+### Problem 02. Subsetting, Slicing, & Indexing with Dataframes.
 
 This program extracts specific information from the cars dataset using pandas operations such as .iloc, .loc, and conditional filtering.
 
