@@ -3,7 +3,7 @@
 #### Problem 01. Load CSV & Display Rows.
 
 This program loads a .csv file into a pandas DataFrame named cars, and then displays the first five and last five rows of the dataset.
-
+#### Functions utilized in Problem 01
 ```
 pd.read_csv("file.csv")   - loads the CSV file into a DataFrame
 head()                    - displays the first five rows of the DataFrame
@@ -39,6 +39,7 @@ print (cars.tail())
 
 This program extracts specific information from the cars dataset using pandas operations such as .iloc, .loc, and conditional filtering.
 
+#### Functions utilized in Problem 02
 ```
 iloc[rows, cols]       - used for integer-based indexing (row and column positions)
 ::2                    - slice notation that selects every second column (odd-numbered columns)
